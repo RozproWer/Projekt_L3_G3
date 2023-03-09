@@ -25,7 +25,8 @@ public class Users {
     @Column(name = "Last_Name", length = 50)
     private String lastName;
 
-    @Column(name = "Role", length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Role")
     private String role;
 
     @ManyToOne(targetEntity = Groups.class)

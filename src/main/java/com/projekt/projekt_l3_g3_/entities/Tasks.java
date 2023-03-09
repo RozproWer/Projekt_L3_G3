@@ -17,10 +17,12 @@ public class Tasks {
     @Column(name = "Task_Description", length = 254)
     private String taskDescription;
 
-    @Column(name = "Task_Status", length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Task_Status")
     private String taskStatus;
 
-    @Column(name = "Task_Priority", length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Task_Priority")
     private String taskPriority;
 
     @Column(name = "Due_Date")
