@@ -13,10 +13,11 @@ public class Users {
     @Column(name = "Username", length = 50)
     private String username;
 
+    // Need hashing(other table)
     @Column(name = "Password", length = 50)
     private String password;
 
-    @Column(name = "Email_Address", length = 50)
+    @Column(name = "Email_Address", length = 100)
     private String emailAddress;
 
     @Column(name = "First_Name", length = 50)
@@ -25,19 +26,14 @@ public class Users {
     @Column(name = "Last_Name", length = 50)
     private String lastName;
 
+    // (Doctor, Patient, Admin)?
     @Enumerated(EnumType.STRING)
     @Column(name = "Role")
     private String role;
 
+    // Group ID (Foreign Key)
     @ManyToOne(targetEntity = Groups.class)
     @JoinColumn(name = "Group_ID")
     private Groups group;
 
-//
-//    @ManyToOne(targetEntity = Oddzial.class)
-//    @JoinColumn(name = "id_oddzialu")
-//    private Oddzial oddzial;
-//
-//    @Column(name = "nr_telefonu", length = 9)
-//    private String lekarzNrTelefonu;
 }

@@ -11,13 +11,15 @@ public class Messages {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int taskID;
 
-    //    @ManyToOne(targetEntity = Users.class)
+    // Sender ID (Foreign Key)
+    //    @ManyToOne(targetEntity = Sender.class)
     //    @JoinColumn(name = "")
-    //    private Users user;
+    //    private Sender user;
 
-    //    @ManyToOne(targetEntity = Users.class)
+    // Recipient ID (Foreign Key)
+    //    @ManyToOne(targetEntity = Recipient.class)
     //    @JoinColumn(name = "")
-    //    private Users user;
+    //    private Recipient user;
 
     @Column(name = "Message_Content", length = 50)
     private String groupName;
