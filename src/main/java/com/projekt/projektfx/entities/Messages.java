@@ -1,4 +1,4 @@
-package com.projekt.projekt_l3_g3_.entities;
+package com.projekt.projektfx.entities;
 
 import javax.persistence.*;
 import java.security.Timestamp;

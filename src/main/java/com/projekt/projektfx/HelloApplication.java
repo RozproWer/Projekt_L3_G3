@@ -1,4 +1,4 @@
-package com.projekt.projekt_l3_g3_;
+package com.projekt.projektfx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
