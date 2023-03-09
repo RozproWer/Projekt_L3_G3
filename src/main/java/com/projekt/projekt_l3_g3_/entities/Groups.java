@@ -10,4 +10,11 @@ public class Groups {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int groupID;
 
+    @Column(name = "Group_Name", length = 50)
+    private String groupName;
+
+    @ManyToOne(targetEntity = Groups.class)
+    @JoinColumn(name = "Group_ID")
+    private Groups group;
+
 }
